@@ -87,7 +87,10 @@ app.options('/movies/:id', (req, res) => {
         // res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization');
     }
     res.sendStatus(200);
+
 });
-app.listen(3000,()=>{
+
+const PORT = process.env.PORT ?? 3000
+app.listen(PORT,()=>{
     console.log('app listening on port 3000')
 })
